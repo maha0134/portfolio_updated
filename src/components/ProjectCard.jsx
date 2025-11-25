@@ -2,7 +2,7 @@ import { techColors } from '../data/projects';
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
       {/* Project Image */}
       <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 overflow-hidden">
         {project.image ? (
@@ -47,27 +47,27 @@ const ProjectCard = ({ project }) => {
       {/* Project Content */}
       <div className="p-6">
         {/* Category */}
-        <div className="text-sm text-blue-600 font-semibold mb-2">
+        <div className="text-sm text-blue-600 dark:text-blue-400 font-semibold mb-2">
           {project.category}
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-gray-900 mb-3">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
           {project.title}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 mb-4 line-clamp-3">
+        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
           {project.description}
         </p>
 
         {/* Features */}
         {project.features && project.features.length > 0 && (
           <div className="mb-4">
-            <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Features:</h4>
+            <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Key Features:</h4>
             <ul className="space-y-1">
               {project.features.slice(0, 3).map((feature, index) => (
-                <li key={index} className="text-sm text-gray-600 flex items-start">
+                <li key={index} className="text-sm text-gray-600 dark:text-gray-400 flex items-start">
                   <svg
                     className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0"
                     fill="currentColor"
@@ -103,7 +103,7 @@ const ProjectCard = ({ project }) => {
         </div>
 
         {/* Links */}
-        <div className="flex gap-3 pt-4 border-t border-gray-100">
+        <div className="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
           {project.githubUrl && (
             <a
               href={project.githubUrl}

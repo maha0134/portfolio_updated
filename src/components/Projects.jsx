@@ -10,14 +10,14 @@ const Projects = () => {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             My Mobile Projects
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             A showcase of mobile applications I've built using modern frameworks and best practices
           </p>
         </div>
@@ -31,7 +31,7 @@ const Projects = () => {
               className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 ${
                 selectedCategory === category
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
+                  : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 shadow'
               }`}
             >
               {category}
@@ -61,13 +61,13 @@ const Projects = () => {
                 d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <p className="text-gray-500 text-lg">No projects found in this category</p>
+            <p className="text-gray-500 dark:text-gray-400 text-lg">No projects found in this category</p>
           </div>
         )}
 
         {/* Additional Info */}
         <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
             Want to see more? Check out my GitHub for additional projects and contributions.
           </p>
           <a
